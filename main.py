@@ -50,6 +50,10 @@ print("----------------")
 print(f"Test Accuracy: {accuracy:.2%}")
 print("\nClassification Report:")
 print(classification_report(y_test, y_pred, zero_division=0))
+cm = confusion_matrix(y_test, y_pred)
+
+print("\nConfusion Matrix:")
+print(cm)
 
 # 7. Predict for a new sample
 new_data = pd.DataFrame([{
